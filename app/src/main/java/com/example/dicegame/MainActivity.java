@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.Random;
 
@@ -12,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView dice1, dice2, dice3, dice4, dice5;
     private TextView rollResultTextView, gameScoreTextView, rollCountTextView;
     private Button rollButton, resetButton;
+    private ImageView[] imageViewDices;
+    private int [] images;
+
 
     private int gameScore = 0;
     private int rollCount = 0;
@@ -20,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        imageViewDices = new ImageView[] {findViewById(R.id.imagedice1),findViewById(R.id.imagedice2), findViewById(R.id.imagedic3), findViewById(R.id.imagedice4), findViewById(R.id.imagedice5)};
+        images = new int [] {R.drawable.blank_dice, R.drawable.dice1, R.drawable.dice2,
+                R.drawable.dice3,R.drawable.dice4,R.drawable.dice5,R.drawable.dice6};
         // Inicjalizacja komponentów
         dice1 = findViewById(R.id.dice1);
         dice2 = findViewById(R.id.dice2);
@@ -60,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
             diceResults[i] = random.nextInt(6) + 1; // Losuje liczby od 1 do 6
             countResults[diceResults[i] - 1]++; // Zlicza ile razy wylosowano każdą wartość
         }
+        for (int i =0; i<imageViewDices.length; i++){
+            imageViewDices[i].setImageResource(images[diceResults[i]]);
+        }
 
         // Wyświetlanie wyników kostek
         dice1.setText(String.valueOf(diceResults[0]));
@@ -88,6 +97,11 @@ public class MainActivity extends AppCompatActivity {
         dice3.setText("?");
         dice4.setText("?");
         dice5.setText("?");
+
+
+        for (ImageView element: imageViewDices){
+            element.setImageResource(images[0]);
+        }
 
         gameScore = 0;
         rollCount = 0;

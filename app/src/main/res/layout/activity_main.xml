@@ -35,63 +35,61 @@
 
         <TextView
                 android:id="@+id/dice1"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="?"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:padding="10dp"
-                android:background="#FFFFFF"
-                android:layout_margin="5dp"/> <!-- Zmiana z android:margin na android:layout_margin -->
+                style="@style/diceTextView"/> <!-- Zmiana z android:margin na android:layout_margin -->
 
         <TextView
                 android:id="@+id/dice2"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="?"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:padding="10dp"
-                android:background="#FFFFFF"
-                android:layout_margin="5dp"/> <!-- Zmiana z android:margin na android:layout_margin -->
+                style="@style/diceTextView.white"
+                /> <!-- Zmiana z android:margin na android:layout_margin -->
 
         <TextView
                 android:id="@+id/dice3"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="?"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:padding="10dp"
-                android:background="#FFFFFF"
-                android:layout_margin="5dp"/> <!-- Zmiana z android:margin na android:layout_margin -->
+                style="@style/diceTextView.white.black"/> <!-- Zmiana z android:margin na android:layout_margin -->
 
         <TextView
                 android:id="@+id/dice4"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="?"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:padding="10dp"
-                android:background="#FFFFFF"
-                android:layout_margin="5dp"/> <!-- Zmiana z android:margin na android:layout_margin -->
+                style="@style/diceTextView.white"/> <!-- Zmiana z android:margin na android:layout_margin -->
 
         <TextView
                 android:id="@+id/dice5"
+                style="@style/diceTextView"/> <!-- Zmiana z android:margin na android:layout_margin -->
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+        <ImageView
+                android:id="@+id/imagedice1"
                 android:layout_width="0dp"
+                android:layout_height="70dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="?"
-                android:gravity="center"
-                android:textSize="30sp"
-                android:padding="10dp"
-                android:background="#FFFFFF"
-                android:layout_margin="5dp"/> <!-- Zmiana z android:margin na android:layout_margin -->
+                android:src="@drawable/blank_dice"/>
+        <ImageView
+                android:id="@+id/imagedice2"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/blank_dice"/>
+        <ImageView
+                android:id="@+id/imagedic3"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/blank_dice"/>
+        <ImageView
+                android:id="@+id/imagedice4"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/blank_dice"/>
+        <ImageView
+                android:id="@+id/imagedice5"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:src="@drawable/blank_dice"/>
+
     </LinearLayout>
 
     <TextView
